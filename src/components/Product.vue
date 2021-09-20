@@ -34,10 +34,10 @@ export default {
 </script>
 <style>
 .offer {
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   padding: 2px;
+  margin-bottom: 20px;
 }
 .offer-detail {
   display: flex;
