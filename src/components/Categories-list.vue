@@ -1,8 +1,10 @@
 <template>
-    <div class="categories">
-        <h2>Categories</h2>
-        <div v-for="(category,index) in categories" v-bind:key="index" >
-            <Category :category="category" />
+    <div class="categories-container">
+        <h2 class="categories-heading">Categories</h2>
+        <div class="categories"> 
+            <div  class="category" v-for="(category,index) in categories" v-bind:key="index" >
+                <Category :category="category" />
+            </div>
         </div>
     </div>
 </template>
@@ -52,9 +54,18 @@ export default {
 }
 </script>
 <style>
-.categories{
+.categories-container{
     padding: 10px;
-    background-color: #ececec;
-    
+    background-color: #ececec;    
+}
+.categories-heading{
+    text-align: center;
+}
+.categories{
+    display: flex;
+    flex-flow: row wrap;
+}
+.category{
+    width:50%;
 }
 </style>

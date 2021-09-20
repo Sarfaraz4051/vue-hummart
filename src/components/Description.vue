@@ -1,6 +1,6 @@
 <template>
   <div class="description">
-    <h3>Online Supermarket, Delivery In Karachi, Pakistan</h3>
+    <h3 style="text-align:center;">Online Supermarket, Delivery In Karachi, Pakistan</h3>
     <p>
       Ever wondered of entering a grocery store and getting an overview of
       products sections and get to grab the required product from there? The
@@ -35,7 +35,8 @@ export default {
 </script>
 <style>
 .description {
-  padding: 10px;
+  margin-top:20px;
+  padding: 20px;
   background-color: #ececec;
 }
 </style>
