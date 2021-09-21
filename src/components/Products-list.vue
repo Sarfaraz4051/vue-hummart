@@ -1,6 +1,4 @@
 <template>
-  <div>
-    <h2 class="products-heading">Discounted Offers</h2>
     <div class="products">
       <div
         style="width: 20%"
@@ -9,7 +7,6 @@
       >
         <product :offer="offer" />
       </div>
-    </div>
   </div>
 </template>
 <script>
@@ -27,7 +24,7 @@ export default {
           old_price: "Rs 1050",
           new_price: "Rs 950",
           title:
-            "BUY Vital Tea Zip Pack 950 Gm GET Vital Cardamom Green Tea Bags Box 30 Pcs FREE",
+            "BUY Vital Tea Zip Pack 950 Gm GET Vital Green Tea Bags Box 30 Pcs FREE",
         },
         {
           img_src: "images/offers/2.jpg",
@@ -48,7 +45,7 @@ export default {
           old_price: "Rs 360",
           new_price: "Rs 330",
           title:
-            "BUY Nestle Pure Life Water 1.5 Ltr X 6 Pcs GET 3 Nestle Everyday Sachet 15 Gm FREEE",
+            "BUY Pure Life Water 1.5 Ltr X 6 Pcs GET 3 Everyday Sachet 15 Gm FREEE",
         },
         {
           img_src: "images/offers/5.jpg",

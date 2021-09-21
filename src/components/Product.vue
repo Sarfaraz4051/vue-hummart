@@ -14,7 +14,7 @@
         <sub>{{ offer.new_price }}</sub>
       </div>
       <div>
-        <button>Add to Cart</button>
+        <v-btn rounded color="primary" dark> Add to Cart </v-btn>
       </div>
     </div>
   </div>
@@ -43,5 +43,6 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top:10px;
 }
 </style>

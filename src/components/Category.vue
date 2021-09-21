@@ -3,7 +3,7 @@
     <div>
         <img :src="image" :alt="item" />
     </div>
-    <div>
+    <div  class="category-details">
       <h3>{{ category.title }}</h3>
       <p>
         {{ category.description }}
@@ -28,11 +28,14 @@ export default {
 <style>
 .category-item {
     margin: 10px;
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: row;
-    /* width:45%; */
     background-color: white;
     border-bottom:2px solid black;
+}.category-details{
+  display :flex;
+  flex-direction: column;
+  justify-content: center;
 }
 </style>

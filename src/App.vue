@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <Header heading="Hummart UI" />
+    <MainCarousel />
+
     <InfoBar />
     <Products />
     <Categories />
@@ -12,6 +14,7 @@
 <script>
 import {
   Header,
+  MainCarousel,
   InfoBar,
   Products,
   Categories,
@@ -22,6 +25,7 @@ export default {
   name: "App",
   components: {
     Header,
+    MainCarousel,
     InfoBar,
     Products,
     Categories,
