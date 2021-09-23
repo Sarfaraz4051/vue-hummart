@@ -5,7 +5,7 @@
       <v-icon @click="toogleCart()" style="color: green">mdi-close</v-icon>
     </div>
     <div>
-      <div v-for="(item,index) in totalItemsinCart" :key="item.title">
+      <div v-for="(item, index) in totalItemsinCart" :key="item.title">
         <div class="row">
           <div>
             <img
@@ -16,31 +16,37 @@
             />
           </div>
           <div>
-              <v-icon @click="removeItem(index)" >mdi-close</v-icon>
+            <v-icon @click="removeItem(index)">mdi-close</v-icon>
           </div>
         </div>
-        <div >
+        <div>
           {{ item.new_price }}
         </div>
-        <div >
+        <div>
           {{ item.title }}
         </div>
       </div>
     </div>
+    <div class="last-section">Total Ammount: {{ totalAmmount }}</div>
   </div>
 </template>
 <script>
 import { mapGetters } from "vuex";
 export default {
   name: "Cart",
+  data() {
+    return {
+      totalAmmount: 0,
+    };
+  },
   methods: {
     toogleCart() {
       this.$emit("toogleCart");
     },
-    removeItem(index){
-        console.log(index," => index");
-        this.$store.dispatch('removeCartItem',index);
-    }
+    removeItem(index) {
+      console.log(index, " => index");
+      this.$store.dispatch("removeCartItem", index);
+    },
   },
   computed: {
     ...mapGetters(["totalItemsinCart"]),
@@ -67,5 +73,12 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+.last-section {
+  bottom: 0;
+  margin-top: 10px;
+  background-color: yellowgreen;
+  color: white;
+  padding: 30px 10px 30px 10px;
 }
 </style>
