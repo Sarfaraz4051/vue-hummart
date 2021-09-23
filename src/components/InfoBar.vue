@@ -53,6 +53,7 @@ export default {
     background-color: #ececec;
 }
 .info{
+    padding: 20px;
   display:flex;
   flex-direction: row;
   justify-content: space-between;
@@ -62,7 +63,7 @@ export default {
   flex-direction: row;
 }
 .info-block > .icon-style{
-  padding:10px; 
+  /* padding:10px;  */
   align-self: center;
   font-size:48px;
   color:#7bae23;

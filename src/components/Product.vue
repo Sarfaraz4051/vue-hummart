@@ -14,7 +14,7 @@
         <sub>{{ offer.new_price }}</sub>
       </div>
       <div>
-        <v-btn rounded color="primary" dark> Add to Cart </v-btn>
+        <v-btn rounded color="primary" dark @click="selectedItem()"> Add to Cart </v-btn>
       </div>
     </div>
   </div>
@@ -30,6 +30,12 @@ export default {
       image: require(`../assets/${this.offer.img_src}`),
     };
   },
+  methods:{
+    selectedItem(){
+      this.$emit('addItem');
+    }
+
+  }
 };
 </script>
 <style>

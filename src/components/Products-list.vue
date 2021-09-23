@@ -1,12 +1,8 @@
 <template>
-    <div class="products">
-      <div
-        style="width: 20%"
-        v-for="(offer, index) in offers"
-        v-bind:key="index"
-      >
-        <product :offer="offer" />
-      </div>
+  <div class="products">
+    <div style="width: 20%" v-for="(offer, index) in offers" v-bind:key="index">
+      <product :offer="offer" @addItem="addItem(index)" />
+    </div>
   </div>
 </template>
 <script>
@@ -57,6 +53,20 @@ export default {
       ],
     };
   },
+  methods: {
+    addItem(index) {
+      // let seletedItem = { title:this.offers[index].title,
+      //   price:this.offers[index].new_price,
+      //   image:this.offers[index].img_src,
+      // };
+      // this.$store.commit('addItem',seletedItem);
+      // console.log("SelectedItem", seletedItem);
+      this.$store.dispatch('addItemInCart',this.offers[index]);
+    },
+  },
+  created: {
+
+  }
 };
 </script>
 <style>
@@ -64,7 +74,7 @@ export default {
   display: flex;
 }
 .products-heading {
-    margin-top:50px;
+  margin-top: 50px;
   text-align: center;
 }
 </style>
