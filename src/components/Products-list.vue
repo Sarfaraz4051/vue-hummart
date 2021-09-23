@@ -55,12 +55,6 @@ export default {
   },
   methods: {
     addItem(index) {
-      // let seletedItem = { title:this.offers[index].title,
-      //   price:this.offers[index].new_price,
-      //   image:this.offers[index].img_src,
-      // };
-      // this.$store.commit('addItem',seletedItem);
-      // console.log("SelectedItem", seletedItem);
       this.$store.dispatch('addItemInCart',this.offers[index]);
     },
   },

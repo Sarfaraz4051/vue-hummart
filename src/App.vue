@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <Header heading="Hummart UI" />
+    <Cart v-if="showCart" @toogleCart="toogleCart()" class="cart-app" />
+    <Header @toogleCart="toogleCart()"/>
     <MainCarousel />
 
     <InfoBar />
@@ -20,11 +21,12 @@ import {
   Categories,
   Description,
   Footer,
+  Cart
 } from "./components/index.js";
 export default {
   name: "App",
   components: {
-    Header,
+    Header,Cart,
     MainCarousel,
     InfoBar,
     Products,
@@ -32,6 +34,16 @@ export default {
     Description,
     Footer,
   },
+  data() {
+    return {
+      showCart: false,
+    };
+  },
+  methods:{
+    toogleCart() {
+      this.showCart = !this.showCart;
+    },
+  }
 };
 </script>
 
@@ -43,5 +55,10 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.cart-app{
+  z-index: 1;
+  float: right;
+
 }
 </style>
