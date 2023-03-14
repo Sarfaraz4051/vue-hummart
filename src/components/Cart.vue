@@ -10,7 +10,7 @@
           <div>
             <img
               :src="require(`../assets/${item.img_src}`)"
-              alt="pic"
+              alt="picture"
               width="100px"
               height="100px"
             />
